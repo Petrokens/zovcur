@@ -1,0 +1,238 @@
+/* CSR Page Specific Styles */
+
+/* Initiative Badge */
+.initiative-badge {
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: rgba(26, 53, 91, 0.1);
+  color: #1a355b;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Feature Items */
+.feature-item {
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateX(5px);
+}
+
+.feature-icon {
+  min-width: 50px;
+  height: 50px;
+  background-color: rgba(26, 53, 91, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover .feature-icon {
+  background-color: rgba(26, 53, 91, 0.2);
+}
+
+.feature-icon i {
+  font-size: 1.3rem;
+  color: #1a355b;
+}
+
+.feature-content h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1a355b;
+}
+
+.feature-content p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+/* Impact Cards */
+.impact-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.impact-number {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1a355b;
+  margin-bottom: 15px;
+}
+
+.impact-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #1a355b;
+}
+
+.impact-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Involvement Cards */
+.involvement-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.involvement-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+  padding: 30px;
+}
+
+.involvement-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1a355b;
+  margin-bottom: 15px;
+}
+
+.involvement-card p {
+  margin-bottom: 15px;
+}
+
+/* Lead Text Styling */
+.lead-text p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.lead-text p.lead {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #1a355b;
+}
+
+/* CTA Section Enhancements */
+.call-to-action {
+  background: linear-gradient(rgba(26, 53, 91, 0.9), rgba(26, 53, 91, 0.9)), url('../img/hero-bg.png') center center/cover no-repeat;
+  padding: 80px 0;
+}
+
+.call-to-action h2 {
+  color: #ffffff;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.call-to-action p {
+  color: #ffffff;
+  opacity: 0.9;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.call-to-action .btn-primary,
+.call-to-action .btn-secondary {
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 50px;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.call-to-action .btn-primary {
+  background-color: #ffffff;
+  color: #1a355b;
+  border: none;
+}
+
+.call-to-action .btn-primary:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-3px);
+}
+
+.call-to-action .btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.call-to-action .btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: #1a355b;
+  border-color: #1a355b;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #122540;
+  border-color: #122540;
+  transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+  color: #1a355b;
+  border-color: #1a355b;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #1a355b;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .impact-card {
+    padding: 20px 15px;
+  }
+  
+  .impact-number {
+    font-size: 2.2rem;
+  }
+  
+  .lead-text p {
+    font-size: 1rem;
+  }
+  
+  .lead-text p.lead {
+    font-size: 1.1rem;
+  }
+  
+  .call-to-action h2 {
+    font-size: 1.8rem;
+  }
+  
+  .call-to-action p {
+    font-size: 1rem;
+  }
+  
+  .call-to-action .btn-primary,
+  .call-to-action .btn-secondary {
+    margin: 5px;
+    display: inline-block;
+  }
+}

@@ -1,0 +1,502 @@
+/**
+ * Careers Page Specific Styles - Zovcur Pharma
+ * This file contains styles specific to the Careers page for Zovcur Pharma website
+ */
+
+/* Hero Section */
+.hero-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* Career Introduction */
+#career-intro .lead-text {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#career-intro .lead {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #333;
+  font-weight: 400;
+}
+
+/* Why Join Us Section */
+.image-stack {
+  position: relative;
+  height: 500px;
+}
+
+.image-stack__item {
+  position: absolute;
+  width: 80%;
+  height: auto;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-stack__item--top {
+  top: 0;
+  left: 0;
+  width: 70%;
+  z-index: 2;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  transform: rotate(-3deg);
+}
+
+.image-stack__item--bottom {
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  z-index: 1;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  transform: rotate(3deg);
+}
+
+.image-stack:hover .image-stack__item--top {
+  transform: rotate(-5deg) translateY(-10px);
+}
+
+.image-stack:hover .image-stack__item--bottom {
+  transform: rotate(5deg) translateY(10px);
+}
+
+.section-badge {
+  display: inline-block;
+  background-color: rgba(26, 53, 91, 0.1);
+  color: #1a355b;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.benefit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(26, 53, 91, 0.1);
+  border-radius: 10px;
+  font-size: 1.5rem;
+  color: #1a355b;
+}
+
+.benefit-content h4 {
+  color: #1a355b;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.benefits-list .benefit-item {
+  transition: all 0.3s ease;
+}
+
+.benefits-list .benefit-item:hover {
+  transform: translateX(10px);
+}
+
+/* Culture Section */
+.culture-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.culture-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.culture-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  background-color: rgba(26, 53, 91, 0.1);
+  border-radius: 50%;
+  font-size: 1.8rem;
+  color: #1a355b;
+}
+
+.culture-card h4 {
+  color: #1a355b;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Current Openings Section */
+.department-title {
+  color: #1a355b;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(26, 53, 91, 0.1);
+}
+
+.job-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.job-header h4 {
+  color: #1a355b;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+
+.job-badge {
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: rgba(26, 53, 91, 0.1);
+  color: #1a355b;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.job-location {
+  color: #666;
+  margin: 10px 0 15px;
+  font-size: 0.9rem;
+}
+
+.job-location i {
+  margin-right: 5px;
+  color: #1a355b;
+}
+
+.job-requirements {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.job-requirements li {
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+
+.job-footer {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.job-posted {
+  color: #666;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.btn-apply {
+  display: inline-block;
+  padding: 8px 25px;
+  background-color: #1a355b;
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.btn-apply:hover {
+  background-color: #152a48;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(26, 53, 91, 0.3);
+  color: #fff;
+}
+
+.no-match-section {
+  background-color: rgba(26, 53, 91, 0.05);
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.btn-secondary-outline {
+  display: inline-block;
+  padding: 10px 30px;
+  border: 2px solid #1a355b;
+  color: #1a355b;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-secondary-outline:hover {
+  background-color: #1a355b;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(26, 53, 91, 0.2);
+}
+
+/* Testimonials Section */
+.testimonial-item {
+  text-align: center;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+}
+
+.testimonial-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 15px;
+  border: 5px solid rgba(26, 53, 91, 0.1);
+}
+
+.testimonial-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-item h3 {
+  font-size: 1.2rem;
+  color: #1a355b;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.testimonial-item h4 {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.stars {
+  color: #ffb100;
+  margin-bottom: 15px;
+}
+
+.testimonial-item p {
+  font-style: italic;
+  margin-bottom: 0;
+  color: #666;
+}
+
+.quote-icon-left, .quote-icon-right {
+  color: rgba(26, 53, 91, 0.2);
+  font-size: 1.2rem;
+}
+
+/* Process Steps Section */
+.process-steps {
+  margin-top: 50px;
+}
+
+.process-step {
+  text-align: center;
+  position: relative;
+}
+
+.step-number {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1a355b;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.step-icon {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(26, 53, 91, 0.1);
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #1a355b;
+}
+
+.process-step h4 {
+  color: #1a355b;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.process-step p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Benefits Section */
+.benefit-card {
+  margin-bottom: 30px;
+}
+
+.icon-box {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(26, 53, 91, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: #1a355b;
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover .icon-box {
+  background-color: #1a355b;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.benefit-card h4 {
+  color: #1a355b;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Call To Action */
+.call-to-action {
+  background-color: #1a355b;
+  color: #fff;
+  padding: 80px 0;
+}
+
+.call-to-action h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.call-to-action p {
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 12px 32px;
+  background-color: #fff;
+  color: #1a355b;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: rgba(255,255,255,0.9);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 12px 32px;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255,255,255,0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .image-stack {
+    height: 400px;
+    margin-bottom: 30px;
+  }
+  
+  .job-header {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  
+  .job-badge {
+    margin-top: 10px;
+  }
+  
+  .job-footer {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-stack {
+    height: 350px;
+  }
+  
+  .process-step {
+    margin-bottom: 40px;
+  }
+  
+  .benefit-card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .image-stack {
+    height: 300px;
+  }
+  
+  .image-stack__item--top,
+  .image-stack__item--bottom {
+    width: 85%;
+  }
+  
+  .job-card {
+    padding: 20px;
+  }
+}
