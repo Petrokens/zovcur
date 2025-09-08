@@ -1,0 +1,165 @@
+/* Quality Page Specific Styles */
+
+/* Process Cards */
+.process-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.process-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.process-icon {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: rgba(26, 53, 91, 0.1);
+  margin-bottom: 20px;
+}
+
+.process-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #1a355b;
+}
+
+/* Feature Items */
+.feature-item {
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateX(5px);
+}
+
+.feature-item i {
+  font-size: 1.1rem;
+  color: #1a355b;
+}
+
+/* Certification Items */
+.certification-item {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.certification-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.certification-content {
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.certification-content h3 {
+  color: #1a355b;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* Lead Text Styling */
+.lead-text p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.lead-text p.lead {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #1a355b;
+}
+
+/* CTA Section Enhancements */
+.call-to-action {
+  background: linear-gradient(rgba(26, 53, 91, 0.9), rgba(26, 53, 91, 0.9)), url('../img/hero-bg.png') center center/cover no-repeat;
+  padding: 80px 0;
+}
+
+.call-to-action h2 {
+  color: #ffffff;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.call-to-action p {
+  color: #ffffff;
+  opacity: 0.9;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.call-to-action .btn-primary,
+.call-to-action .btn-secondary {
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 50px;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.call-to-action .btn-primary {
+  background-color: #ffffff;
+  color: #1a355b;
+  border: none;
+}
+
+.call-to-action .btn-primary:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-3px);
+}
+
+.call-to-action .btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.call-to-action .btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .process-card {
+    padding: 20px;
+  }
+  
+  .lead-text p {
+    font-size: 1rem;
+  }
+  
+  .lead-text p.lead {
+    font-size: 1.1rem;
+  }
+  
+  .call-to-action h2 {
+    font-size: 1.8rem;
+  }
+  
+  .call-to-action p {
+    font-size: 1rem;
+  }
+  
+  .call-to-action .btn-primary,
+  .call-to-action .btn-secondary {
+    margin: 5px;
+    display: inline-block;
+  }
+}

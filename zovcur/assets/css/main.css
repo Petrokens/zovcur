@@ -1,17 +1,8 @@
-/**
-* Template Name: MediTrust
-* Template URL: https://bootstrapmade.com/meditrust-bootstrap-hospital-website-template/
-* Updated: Jul 04 2025 with Bootstrap v5.3.7
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 @charset "UTF-8";
 
 /*--------------------------------------------------------------
 # Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
+
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -23,7 +14,7 @@
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #2c3031; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #18444c; /* Color for headings, subheadings and title throughout the website */
+  --heading-color: #125774; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #049ebb; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
@@ -502,16 +493,17 @@ h6 {
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
+
 .footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: #fff; /* text color */
+  background-color: #125774; /* footer background */
   font-size: 14px;
   position: relative;
 }
 
 .footer .footer-top {
   padding-top: 50px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* subtle line */
 }
 
 .footer .footer-about .logo {
@@ -525,7 +517,7 @@ h6 {
 }
 
 .footer .footer-about .logo span {
-  color: var(--heading-color);
+  color: #fff;
   font-family: var(--heading-font);
   font-size: 26px;
   font-weight: 700;
@@ -535,6 +527,7 @@ h6 {
 .footer .footer-about p {
   font-size: 14px;
   font-family: var(--heading-font);
+  color: #fff;
 }
 
 .footer .social-links a {
@@ -544,16 +537,17 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: #fff;
   margin-right: 10px;
   transition: 0.3s;
+  font-weight: bold; /* bold active look */
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  color: #FF5A58; /* accent color for hover (pick your vibe) */
+  border-color: #FF5A58;
 }
 
 .footer h4 {
@@ -561,6 +555,7 @@ h6 {
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
+  color: #fff;
 }
 
 .footer .footer-links {
@@ -590,32 +585,38 @@ h6 {
 }
 
 .footer .footer-links ul a {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: rgba(255, 255, 255, 0.7);
   display: inline-block;
   line-height: 1;
+  font-weight: 500;
 }
 
 .footer .footer-links ul a:hover {
-  color: var(--accent-color);
+  color: #F99928; /* hover accent */
 }
 
 .footer .footer-contact p {
   margin-bottom: 5px;
+  color: #fff;
 }
 
 .footer .copyright {
   padding: 25px 0;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer .copyright p {
   margin-bottom: 0;
+  color: #fff;
+  font-weight: bold;
 }
 
 .footer .credits {
   margin-top: 8px;
   font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
 }
+
 
 /*--------------------------------------------------------------
 # Preloader
