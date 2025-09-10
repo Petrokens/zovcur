@@ -1,3 +1,10 @@
+// Preloader Hide Script (Global)
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    var preloader = document.getElementById('preloader');
+    if (preloader) preloader.classList.add('hide');
+  }, 500);
+});
 /**
 * Template Name: MediTrust
 * Template URL: https://bootstrapmade.com/meditrust-bootstrap-hospital-website-template/

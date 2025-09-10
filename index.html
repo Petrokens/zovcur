@@ -15,7 +15,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +28,139 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Super Shining Button Animation Styles -->
+  <style>
+    /* Additional Brand Color Variables for Enhanced Design */
+    :root {
+      --brand-primary: #125774;    /* Dark Blue - Primary brand color */
+      --brand-secondary: #F99928;  /* Yellow/Orange - Secondary accent */
+      --brand-tertiary: #20D0CE;   /* Sky Blue - Tertiary accent */
+      --brand-alert: #FF5A58;      /* Pink/Coral - Alert color */
+      --brand-primary-light: #1a6b8a; /* Lighter shade of primary */
+      --brand-primary-dark: #0e4a61;  /* Darker shade of primary */
+      --brand-secondary-light: #fdb65e; /* Lighter shade of secondary */
+      --brand-tertiary-light: #4dd9d5;  /* Lighter shade of tertiary */
+    }
 
+    .gradient-btn {
+      position: relative;
+      z-index: 1;
+      transition: all 0.1s ease;
+      overflow: hidden;
+    }
+
+    /* Professional shine effect overlay */
+    .gradient-btn::after {
+      content: '';
+      position: absolute;
+      top: -100%;
+      left: -100%;
+      width: 40%;
+      height: 300%;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 10%,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgba(255, 255, 255, 0.1) 90%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: rotate(25deg);
+      z-index: 3;
+      opacity: 0;
+      transition: opacity 0.1s;
+      pointer-events: none;
+      filter: blur(3px);
+    }
+
+    .gradient-btn:hover {
+      transform: translateY(-2px);
+      transition: all 0.1s ease;
+    }
+    
+    .gradient-btn:hover::after {
+      animation: super-shine 2s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+      opacity: 1;
+    }
+
+    /* Primary button hover effect - using Sky Blue */
+    .primary-gradient {
+      background: var(--brand-tertiary);
+    }
+    
+    .primary-gradient:hover {
+      color: white;
+      background: var(--brand-primary);
+      border-color: transparent;
+      box-shadow: 0 8px 25px rgba(32, 208, 206, 0.5);
+    }
+
+    /* Secondary button hover effect - using Yellow/Orange */
+    .secondary-gradient:hover {
+      color: var(--brand-primary);
+      background: var(--brand-secondary-light);
+      border-color: var(--brand-secondary);
+      box-shadow: 0 8px 25px rgba(249, 153, 40, 0.5);
+    }
+
+    /* Super shine sweep animation with professional timing */
+    @keyframes super-shine {
+      0% {
+        left: -100%;
+        opacity: 0;
+      }
+      10% {
+        left: -80%;
+        opacity: 0.7;
+        transform: rotate(25deg);
+      }
+      /* Slow start phase */
+      30% {
+        left: -30%;
+        opacity: 0.8;
+        transform: rotate(25deg);
+      }
+      /* Medium middle phase */
+      60% {
+        left: 60%;
+        opacity: 0.9;
+        transform: rotate(25deg);
+      }
+      /* Fast end phase */
+      85% {
+        left: 150%;
+        opacity: 0.7;
+        transform: rotate(25deg);
+      }
+      100% {
+        left: 180%;
+        opacity: 0;
+        transform: rotate(25deg);
+      }
+    }
+
+    /* Make sure text remains readable during animation */
+    .btn-text {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Feature Icon Hover Effects */
+    .about-feature-card:hover .feature-icon-wrapper {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.15),
+        inset 0 2px 0 rgba(255, 255, 255, 0.9),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    .about-feature-card:hover .feature-icon-wrapper i {
+      font-size: 2rem;
+      text-shadow: 
+        0 3px 6px rgba(0, 0, 0, 0.3),
+        0 1px 0 rgba(255, 255, 255, 0.9);
+    }
+  </style>
 </head>
 
 <body class="index-page">
@@ -98,7 +230,22 @@
         <ul>
           <li><a href="/" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="products.html">Products</a></li>
+          <li class="dropdown"><a href="products.html"><span>Products</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="products.html#formulations">Pharmaceutical Formulations</a></li>
+              <li class="dropdown"><a href="#"><span>Therapeutic Segments</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="products.html#gynecology">Gynecology</a></li>
+                  <li><a href="products.html#diabetology">Diabetology</a></li>
+                  <li><a href="products.html#cardiology">Cardiology</a></li>
+                  <li><a href="products.html#neurology">Neurology</a></li>
+                  <li><a href="products.html#gastroenterology">Gastroenterology</a></li>
+                </ul>
+              </li>
+              <li><a href="products.html#biopharma">Biopharmaceuticals &amp; Advanced Therapies</a></li>
+              <li><a href="products.html#nutraceuticals">Nutraceuticals &amp; Wellness</a></li>
+            </ul>
+          </li>
           <li><a href="quality.html">Quality</a></li>
           <li><a href="csr.html">CSR</a></li>
           <li><a href="careers.html">Careers</a></li>
@@ -117,20 +264,24 @@
     <!-- Hero Section -->
       <section id="hero" class="hero section dark-background position-relative" style="overflow:hidden;">
         <div class="container-fluid p-0">
-          <div class="hero-wrapper d-flex align-items-center position-relative" style="min-height: 60vh; background: url('assets/img/hero-bg.png') center center/cover no-repeat;">
-            <!-- Overlay for better text contrast -->
-            <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100" style="background:rgba(26,53,91,0.45);z-index:1;"></div>
+          <div class="hero-wrapper d-flex align-items-center position-relative" style="min-height: 60vh; background: url('assets/img/banner.png') right center/cover no-repeat;">
+            <!-- Overlay for better text contrast with gradient for better content visibility -->
+            <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100" style="background:linear-gradient(to right, rgba(26,53,91,0.7) 0%, rgba(26,53,91,0.45) 60%, rgba(26,53,91,0.25) 100%);z-index:1;"></div>
             <div class="hero-content position-relative w-100" style="flex:2;display:flex;align-items:center;z-index:2;">
               <div class="container">
                 <div class="row">
-                  <div class="col-lg-10 col-md-12 mx-auto">
+                  <div class="col-lg-8 col-md-10 col-12">
                     <div class="content-box" style="padding:2.5rem 0;">
-                      <span class="badge-accent d-inline-block mb-3" style="background:#fff;color:#1a355b;padding:0.6em 1.5em;border-radius:2em;font-size:1.15em;font-weight:600;box-shadow:0 2px 8px rgba(26,53,91,0.10);letter-spacing:0.5px;">Trusted. Innovative. Global.</span>
-                      <h1 style="font-size:3.2rem;font-weight:900;color:#fff;margin-top:0.5rem;line-height:1.15;letter-spacing:-1px;text-shadow:0 2px 8px rgba(26,53,91,0.18);">Empowering Health, Inspiring Hope</h1>
-                      <p style="font-size:1.35rem;color:#f3f6fa;max-width:700px;margin-top:1.2rem;line-height:1.5;text-shadow:0 1px 4px rgba(26,53,91,0.10);">Zovcur Pharma delivers world-class medicines and healthcare solutions, driven by science, compassion, and a commitment to a healthier tomorrow. Trusted by millions, we innovate for life—every day, everywhere.</p>
+                      <span class="badge-accent d-inline-block mb-3" style="background:#fff;color:var(--brand-primary);padding:0.6em 1.5em;border-radius:2em;font-size:1.15em;font-weight:600;box-shadow:0 2px 8px rgba(18,87,116,0.15);letter-spacing:0.5px;">Trusted. Innovative. Global.</span>
+                      <h1 style="font-size:3.2rem;font-weight:700;color:#fff;margin-top:0.5rem;line-height:1.15;letter-spacing:-1px;text-shadow:0 2px 8px rgba(18,87,116,0.25);">Empowering Health, Inspiring Hope</h1>
+                      <p style="font-size:1.35rem;color:#f3f6fa;max-width:700px;margin-top:1.2rem;line-height:1.5;text-shadow:0 1px 4px rgba(18,87,116,0.15);">Zovcur Pharma delivers world-class medicines and healthcare solutions, driven by science, compassion, and a commitment to a healthier tomorrow. Trusted by millions, we innovate for life—every day, everywhere.</p>
                       <div class="cta-group mt-5 d-flex flex-wrap gap-3">
-                        <a href="#" class="btn btn-primary px-4 py-2 fw-bold shadow-sm" style="border-radius:2em;font-size:1.15em;background:#00b4d8;border:none;">Discover Our Solutions</a>
-                        <a href="#" class="btn btn-outline-light px-4 py-2 fw-bold shadow-sm" style="border-radius:2em;font-size:1.15em;border:2px solid #fff;color:#000; background:#fff;">Partner With Us</a>
+                        <a href="#" class="btn btn-primary px-4 py-2 fw-bold shadow-sm gradient-btn primary-gradient" style="border-radius:2em;font-size:1.15em;background:var(--brand-tertiary);border:none;color:#fff;">
+                          <span class="btn-text">Discover Our Solutions</span>
+                        </a>
+                        <a href="#" class="btn px-4 py-2 fw-bold shadow-sm gradient-btn secondary-gradient" style="border-radius:2em;font-size:1.15em;border:2px solid var(--brand-secondary);color:#fff;background:var(--brand-secondary);">
+                          <span class="btn-text">Partner With Us</span>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -147,32 +298,44 @@
         <div class="row align-items-center justify-content-center">
           <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay="200">
             <div class="card shadow border-0 h-100 p-0 bg-white rounded-4 position-relative overflow-hidden">
-              <img src="assets/img/about.png" alt="Zovcur Pharma Facility" class="img-fluid rounded-4 w-100" style="object-fit:cover;min-height:320px;max-height:400px;">
+              <img src="assets/img/hero-bg2.png" alt="Zovcur Pharma Facility" class="img-fluid rounded-4 w-100" style="object-fit:cover;min-height:320px;max-height:400px;">
             </div>
           </div>
           <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
             <div class="about-content px-lg-4">
-              <h2 class="fw-bold mb-3" style="color:#1a355b;">About Zovcur Pharma Pvt. Ltd.</h2>
-              <p class="lead mb-4" style="font-size:1.15rem;">Zovcur Pharma is a next-generation pharmaceutical company dedicated to improving global health outcomes. Headquartered in India, we blend research, technology, and ethics to create healthcare solutions that truly matter.</p>
+              <h2 class="fw-bold mb-3" style="color:var(--brand-primary);">About Zovcur Pharma Pvt. Ltd.</h2>
+              <p class="mb-4" style="font-size:1.15rem;">Zovcur Pharma is a next-generation pharmaceutical company dedicated to improving global health outcomes. Headquartered in India, we blend research, technology, and ethics to create healthcare solutions that truly matter.</p>
               <div class="row g-3 mb-3">
                 <div class="col-md-4">
                   <div class="about-feature-card h-100 p-3 rounded-3 shadow-sm bg-light border-0">
-                    <div class="mb-2"><i class="bi bi-bullseye" style="color:#1a355b;font-size:1.5rem;"></i></div>
-                    <h5 class="fw-semibold mb-1" style="color:#1a355b;">Mission</h5>
+                    <div class="mb-2">
+                      <div class="feature-icon-wrapper" style="display: inline-block; height: 60px; width: 60px; line-height: 60px; text-align: center; border-radius: 50%; background: linear-gradient(145deg, #e3f2fd, #bbdefb); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 -1px 0 rgba(0, 0, 0, 0.1); border: 2px solid rgba(18, 87, 116, 0.2); transition: all 0.3s ease;">
+                        <i class="bi bi-bullseye" style="color:var(--brand-primary);font-size:1.8rem; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.8);"></i>
+                      </div>
+                    </div>
+                    <h5 class="fw-semibold mb-1" style="color:var(--brand-primary);">Mission</h5>
                     <p class="mb-0 small">To develop, manufacture, and deliver high-quality, affordable medicines and healthcare services that enhance and extend lives.</p>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="about-feature-card h-100 p-3 rounded-3 shadow-sm bg-light border-0">
-                    <div class="mb-2"><i class="bi bi-eye" style="color:#1a355b;font-size:1.5rem;"></i></div>
-                    <h5 class="fw-semibold mb-1" style="color:#1a355b;">Vision</h5>
+                    <div class="mb-2">
+                      <div class="feature-icon-wrapper" style="display: inline-block; height: 60px; width: 60px; line-height: 60px; text-align: center; border-radius: 50%; background: linear-gradient(145deg, #fff3e0, #ffe0b2); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 -1px 0 rgba(0, 0, 0, 0.1); border: 2px solid rgba(249, 153, 40, 0.2); transition: all 0.3s ease;">
+                        <i class="bi bi-eye" style="color:var(--brand-secondary);font-size:1.8rem; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.8);"></i>
+                      </div>
+                    </div>
+                    <h5 class="fw-semibold mb-1" style="color:var(--brand-primary);">Vision</h5>
                     <p class="mb-0 small">To be recognized as a trusted global partner in healthcare, combining cure and care in everything we do.</p>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="about-feature-card h-100 p-3 rounded-3 shadow-sm bg-light border-0">
-                    <div class="mb-2"><i class="bi bi-gem" style="color:#1a355b;font-size:1.5rem;"></i></div>
-                    <h5 class="fw-semibold mb-1" style="color:#1a355b;">Core Values</h5>
+                    <div class="mb-2">
+                      <div class="feature-icon-wrapper" style="display: inline-block; height: 60px; width: 60px; line-height: 60px; text-align: center; border-radius: 50%; background: linear-gradient(145deg, #e0f7fa, #b2ebf2); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 -1px 0 rgba(0, 0, 0, 0.1); border: 2px solid rgba(32, 208, 206, 0.2); transition: all 0.3s ease;">
+                        <i class="bi bi-gem" style="color:var(--brand-tertiary);font-size:1.8rem; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.8);"></i>
+                      </div>
+                    </div>
+                    <h5 class="fw-semibold mb-1" style="color:var(--brand-primary);">Core Values</h5>
                     <ul class="mb-0 ps-3 small">
                       <li>Integrity</li>
                       <li>Excellence</li>
@@ -183,15 +346,15 @@
                 </div>
               </div>
               <div class="cta-wrapper mt-4">
-                <a href="#zovcur-main-content" class="btn btn-primary me-2">Explore Our Story</a>
-                <a href="#zovcur-main-content" class="btn btn-outline-primary">Contact Us</a>
+                <a href="#" class="btn btn-primary me-2" style="background:var(--brand-primary);border-color:var(--brand-primary);">Explore Our Story</a>
+                <a href="#" class="btn gradient-btn" style="border-radius:2em;background:var(--brand-tertiary);color:#fff;border:2px solid var(--brand-tertiary);"><span class="btn-text">Contact Us</span></a>
               </div>
             </div>
           </div>
         </div>
         <!-- <div class="row mt-5 pt-4 certifications-row justify-content-center" data-aos="fade-up" data-aos-delay="600">
           <div class="col-12 text-center mb-4">
-            <h4 class="certification-title fw-bold" style="color:#1a355b;">Our Accreditations</h4>
+            <h4 class="certification-title fw-bold" style="color:var(--brand-primary);">Our Accreditations</h4>
           </div>
           <div class="col-lg-10 mx-auto">
             <div class="certifications d-flex justify-content-center flex-wrap gap-4">
@@ -307,7 +470,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="department-card">
               <div class="department-image">
-                <img src="assets/img/divisions/CSR & Sustainability.png" alt="CSR & Sustainability" class="img-fluid">
+                <img src="assets/img/divisions/CSR.png" alt="CSR & Sustainability" class="img-fluid">
               </div>
               <div class="department-content">
                 <div class="department-icon">
@@ -346,10 +509,6 @@
                   <li><i class="fas fa-check-circle"></i>Strict Quality Control</li>
                   <li><i class="fas fa-check-circle"></i>Regulatory Compliance (WHO-GMP, EU-GMP)</li>
                 </ul>
-                <a href="#zovcur-main-content" class="service-btn">
-                  Learn More
-                  <i class="fas fa-arrow-right"></i>
-                </a>
               </div>
             </div>
           </div><!-- End Service Card -->
@@ -367,10 +526,6 @@
                   <li><i class="fas fa-check-circle"></i>Scale-Up & Technology Transfer</li>
                   <li><i class="fas fa-check-circle"></i>Full Regulatory Documentation</li>
                 </ul>
-                <a href="#zovcur-main-content" class="service-btn">
-                  Learn More
-                  <i class="fas fa-arrow-right"></i>
-                </a>
               </div>
             </div>
           </div><!-- End Service Card -->
@@ -388,10 +543,6 @@
                   <li><i class="fas fa-check-circle"></i>Formulation Improvements</li>
                   <li><i class="fas fa-check-circle"></i>Technology Transfer</li>
                 </ul>
-                <a href="#zovcur-main-content" class="service-btn">
-                  Learn More
-                  <i class="fas fa-arrow-right"></i>
-                </a>
               </div>
             </div>
           </div><!-- End Service Card -->
@@ -409,10 +560,6 @@
                   <li><i class="fas fa-check-circle"></i>Regulatory Dossier Support</li>
                   <li><i class="fas fa-check-circle"></i>Cold Chain Logistics</li>
                 </ul>
-                <a href="#zovcur-main-content" class="service-btn">
-                  Learn More
-                  <i class="fas fa-arrow-right"></i>
-                </a>
               </div>
             </div>
           </div><!-- End Service Card -->
@@ -442,10 +589,6 @@
               </div>
               <h5>Quality Medicines</h5>
               <p>WHO-GMP, EU-GMP, and ISO certified manufacturing for global markets.</p>
-              <a href="#zovcur-main-content" class="feature-link">
-                <span>Explore Products</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
@@ -455,10 +598,6 @@
               </div>
               <h5>Custom API Synthesis</h5>
               <p>Tailored solutions for your API and intermediate requirements.</p>
-              <a href="#zovcur-main-content" class="feature-link">
-                <span>Learn More</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
@@ -468,10 +607,6 @@
               </div>
               <h5>Global Export & Supply</h5>
               <p>Supplying medicines and healthcare products to 30+ countries worldwide.</p>
-              <a href="#zovcur-main-content" class="feature-link">
-                <span>Our Reach</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
             </div>
           </div>
         </div>
@@ -579,8 +714,15 @@
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+
+  <!-- Preloader will be injected dynamically -->
+  <script>
+    fetch('assets/partials/preloader.html')
+      .then(res => res.text())
+      .then(html => {
+        document.body.insertAdjacentHTML('afterbegin', html);
+      });
+  </script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -590,6 +732,9 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+
+
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>

@@ -5,9 +5,9 @@
 
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Lato",  sans-serif;
+  --default-font: 'Inter', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --heading-font: 'Inter', Arial, sans-serif;
+  --nav-font: 'Inter', Arial, sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -15,7 +15,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #2c3031; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #125774; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #049ebb; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #F99928; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -49,14 +49,58 @@
 :root {
   scroll-behavior: smooth;
 }
-
+/* Preloader Animation Styles (Global) */
+#preloader {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw; height: 100vh;
+  background: #fff;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+  opacity: 1;
+  pointer-events: all;
+}
+#preloader.hide {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(1.08) rotate(-3deg);
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+}
+.preloader-logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
+  animation: preloader-bounce 1.4s infinite cubic-bezier(.4,0,.2,1);
+}
+@keyframes preloader-bounce {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  40% { transform: scale(1.08) rotate(2deg); }
+  60% { transform: scale(0.97) rotate(-2deg); }
+}
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
+
 body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+}
+
+h1, h2, h3, h4, h5, h6, .section-title h2, .page-title h1, .sitename, .logo h1, .navmenu, .btn-getstarted, .gradient-btn {
+  font-family: var(--heading-font);
+  letter-spacing: -0.5px;
+}
+
+p, li, ul, ol, .card-body, .lead, .footer, .footer-contact, .footer-links, .breadcrumb, .form-control, .form-label, .form-text, .section-title p, .page-title p {
+  font-family: var(--default-font);
+  font-weight: 400;
+  letter-spacing: 0.01em;
 }
 
 a {
@@ -187,8 +231,8 @@ h6 {
 
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
-  color: var(--contrast-color);
-  background: var(--accent-color);
+  color: #ffffff;
+  background: #FF5A58;
   font-size: 14px;
   padding: 8px 20px;
   margin: 0 0 0 30px;
@@ -198,8 +242,8 @@ h6 {
 
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  color: #ffffff;
+  background: color-mix(in srgb, #FF5A58, transparent 15%);
 }
 
 @media (max-width: 1200px) {

@@ -75,18 +75,64 @@
 
 .therapeutic-icon {
   display: inline-block;
-  height: 60px;
-  width: 60px;
-  line-height: 60px;
+  height: 80px;
+  width: 80px;
+  line-height: 80px;
   text-align: center;
   border-radius: 50%;
-  background-color: rgba(26, 53, 91, 0.1);
   margin-bottom: 20px;
+  position: relative;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  box-shadow: 
+    0 8px 16px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.therapeutic-icon::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.1));
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.therapeutic-card:hover .therapeutic-icon::before {
+  opacity: 1;
+}
+
+.therapeutic-card:hover .therapeutic-icon {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 
+    0 12px 24px rgba(0, 0, 0, 0.15),
+    inset 0 2px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.15);
 }
 
 .therapeutic-icon i {
-  font-size: 24px;
-  color: #1a355b;
+  font-size: 32px;
+  /* Removed default color to allow inline colors to work */
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    0 1px 0 rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.therapeutic-card:hover .therapeutic-icon i {
+  font-size: 36px;
+  text-shadow: 
+    0 3px 6px rgba(0, 0, 0, 0.3),
+    0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 .therapeutic-card h3 {
