@@ -219,7 +219,7 @@ h6 {
 .header .logo h1 {
   font-size: 24px;
   margin: 0;
-  font-weight: 700;
+  font-weight: bold;
   color: var(--heading-color);
 }
 
