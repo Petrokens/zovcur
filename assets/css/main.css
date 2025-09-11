@@ -550,6 +550,7 @@ h6 {
   }
 
   .navmenu .megamenu-2 .desktop-megamenu {
+    margin-top: 10px;
     background-color: var(--nav-dropdown-background-color);
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
     position: absolute;
@@ -559,7 +560,7 @@ h6 {
     visibility: hidden;
     opacity: 0;
     transition: 0.3s;
-    border-radius: 50px;
+    border-radius: 10px 10px 10px 10px;
     z-index: 99;
     padding: 0;
     display: flex;
@@ -1273,7 +1274,7 @@ section,
 .hero .hero-wrapper {
   position: relative;
   width: 100%;
-  min-height: 70vh;
+  max-height: 70vh;
   display: flex;
   align-items: center;
   padding: 120px 0 60px 0;
@@ -2281,7 +2282,7 @@ section,
 # Call To Action Section
 --------------------------------------------------------------*/
 .call-to-action {
-  background: linear-gradient(135deg, var(--surface-color) 0%, color-mix(in srgb, var(--accent-color), transparent 95%) 100%);
+  background: linear-gradient(135deg, var(--surface-color) 0%, color-mix(in srgb, var(--nav-dropdown-hover-color), transparent 95%) 100%);
 }
 
 .call-to-action .content h2 {

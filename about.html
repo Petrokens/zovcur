@@ -599,7 +599,7 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background position-relative" style="overflow:hidden;">
       <div class="container-fluid p-0">
-        <div class="hero-wrapper d-flex align-items-center position-relative" style="min-height: 60vh; background: url('assets/img/about/zovcur.png') center center/cover no-repeat;">
+        <div class="hero-wrapper d-flex align-items-center position-relative" style="min-height: 60vh; background: url('assets/img/about/img-1.png') center center/cover no-repeat;">
           <!-- Overlay for better text contrast -->
           <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100" style="background:rgba(26,53,91,0.65);z-index:1;"></div>
           <div class="hero-content position-relative w-100" style="flex:2;display:flex;align-items:center;z-index:2;">
@@ -783,84 +783,191 @@
     <!-- /Our Journey Section -->
     
     <!-- Leadership Team Section -->
-    <section id="leadership" class="section light-background">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Leadership Team</h2>
-          <p>Experienced professionals guiding our vision</p>
-        </div>
-        
-        <div class="row gy-4">
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/person/person-m-3.webp" alt="Leadership Team Member" class="img-fluid">
-                <div class="social-links">
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                  <a href="#"><i class="bi bi-twitter-x"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Dr. Rajesh Kumar</h4>
-                <p class="position">Chief Executive Officer</p>
-                <p class="bio">With over 25 years in pharmaceutical leadership, Dr. Kumar brings vision and strategic direction to Zovcur's global operations.</p>
-              </div>
-            </div>
+
+
+    <style>
+  /* Leadership Section Styling */
+#leadership .team-member {
+  background: #fff;
+  border-radius: 16px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  perspective: 1000px; /* enable 3D effect */
+}
+
+#leadership .team-member:hover {
+  transform: rotateY(8deg) rotateX(6deg) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Image */
+#leadership .team-member .member-img {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 10px;
+  border-radius: 0px;
+  overflow: hidden;
+  transition: transform 0.50s ease;
+  transform: scale(1.15); /* Zoom effect */
+}
+
+#leadership .team-member:hover .member-img {
+  transform: scale(1.20); /* Zoom effect */
+}
+
+#leadership .team-member img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text Styling */
+#leadership .member-info h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #002b5c;
+}
+
+#leadership .member-info .position {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+#leadership .member-info .bio {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  text-align: left;
+  margin-top: 8px;
+  transition: color 0.3s ease;
+}
+
+#leadership .team-member:hover .bio {
+  color: #222; /* darker text when hovered */
+}
+
+/* Social links */
+#leadership .social-links {
+  margin-top: 14px;
+  text-align: center;
+}
+
+#leadership .social-links a {
+  font-size: 18px;
+  margin: 0 6px;
+  color: #0d6efd;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#leadership .social-links a:hover {
+  color: #002b5c;
+  transform: scale(1.2);
+}
+
+/* Grid alignment */
+#leadership .row {
+  justify-content: center;
+}
+
+#leadership .col-lg-4 {
+  display: flex;
+}
+
+/* Scroll animations (fade-in zoom) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+#leadership .team-member {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+#leadership .col-lg-4:nth-child(1) .team-member {
+  animation-delay: 0.2s;
+}
+#leadership .col-lg-4:nth-child(2) .team-member {
+  animation-delay: 0.4s;
+}
+#leadership .col-lg-4:nth-child(3) .team-member {
+  animation-delay: 0.6s;
+}
+
+    </style>
+
+<!-- Leadership Team Section -->
+
+<section id="leadership" class="section light-background">
+
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Leadership Team</h2>
+      <p>Experienced professionals guiding our vision</p>
+    </div>
+
+    <div class="row gy-4">
+
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="team-member">
+          <div class="member-img">
+            <img src="assets/img/team/murali.jpeg" alt="Leadership Team Member" class="img-fluid">
           </div>
-          
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/person/person-f-10.webp" alt="Leadership Team Member" class="img-fluid">
-                <div class="social-links">
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                  <a href="#"><i class="bi bi-twitter-x"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Dr. Priya Shah</h4>
-                <p class="position">Chief Scientific Officer</p>
-                <p class="bio">Leading our R&D initiatives, Dr. Shah spearheads innovation in drug development and formulation technologies.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/person/person-m-7.webp" alt="Leadership Team Member" class="img-fluid">
-                <div class="social-links">
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                  <a href="#"><i class="bi bi-twitter-x"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Vikram Mehta</h4>
-                <p class="position">Chief Operations Officer</p>
-                <p class="bio">Overseeing global manufacturing and supply chain, Vikram ensures operational excellence across all facilities.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/person/person-f-5.webp" alt="Leadership Team Member" class="img-fluid">
-                <div class="social-links">
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                  <a href="#"><i class="bi bi-twitter-x"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Ananya Patel</h4>
-                <p class="position">Chief Quality Officer</p>
-                <p class="bio">Ensuring global compliance and product excellence, Ananya leads our comprehensive quality assurance systems.</p>
-              </div>
-            </div>
+          <div class="member-info">
+            <h4>Murali Govindaraj</h4>
+            <p class="position">Managing Director</p>
+            <p class="bio">As Managing Director, Murali provides overall leadership, strategic direction, and operational oversight. With a strong background in business growth and management, he ensures the company’s vision is translated into measurable performance and long-term value creation.</p>
           </div>
         </div>
       </div>
-    </section><!-- /Leadership Team Section -->
+
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="team-member">
+          <div class="member-img">
+            <img src="assets/img/team/jayaraj-sir.jpeg" alt="Leadership Team Member" class="img-fluid">
+          </div>
+          <div class="member-info">
+            <h4>Jeyaraj Subbiah</h4>
+            <p class="position">Executive Director</p>
+            <p class="bio">As Executive Director, Jeyaraj plays a pivotal role in guiding corporate governance, regulatory alignment, and operational efficiency. His focus on compliance and excellence ensures the company maintains the highest standards in products, services, and partnerships.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="team-member">
+          <div class="member-img">
+            <img src="assets/img/team/meljoe.jpeg" alt="Leadership Team Member" class="img-fluid">
+          </div>
+          <div class="member-info">
+            <h4>Melvin Joe Fernandez</h4>
+            <p class="position">Director, Sales & Marketing</p>
+            <p class="bio">As Director of Sales & Marketing, Melvin leads market development, brand positioning, and client engagement strategies. His expertise in sales growth and customer relationship management strengthens the company’s presence in the pharmaceutical market and expands its global reach.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section><!-- /Leadership Team Section -->
+
+
     
     <!-- Global Vision Section -->
     <section id="global-presence" class="section">
@@ -1005,10 +1112,11 @@
 
           </div>
           <div class="social-links d-flex mt-4">
-            <a href="https://twitter.com/zovcur" target="_blank"><i class="bi bi-twitter-x"></i></a>
-            <a href="https://facebook.com/zovcur" target="_blank"><i class="bi bi-facebook"></i></a>
-            <a href="https://instagram.com/zovcur" target="_blank"><i class="bi bi-instagram"></i></a>
-            <a href="https://linkedin.com/company/zovcur" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://x.com/zovcur57658" target="_blank"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61580453947843" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/zovcurpharma/" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/zovcur-pharma" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.youtube.com/@zovcur" target="_blank"><i class="bi bi-youtube"></i></a>
           </div>
         </div>
 

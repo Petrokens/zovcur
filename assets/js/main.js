@@ -5,13 +5,6 @@ window.addEventListener('load', function() {
     if (preloader) preloader.classList.add('hide');
   }, 500);
 });
-/**
-* Template Name: MediTrust
-* Template URL: https://bootstrapmade.com/meditrust-bootstrap-hospital-website-template/
-* Updated: Jul 04 2025 with Bootstrap v5.3.7
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
 (function() {
   "use strict";
