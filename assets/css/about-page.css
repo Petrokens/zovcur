@@ -313,6 +313,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 200px;
+  height: 100px;
+}
+
+.certification-item img {
   width: 150px;
   height: 100px;
 }
