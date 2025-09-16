@@ -578,7 +578,18 @@
 
             </div><!-- End Desktop Megamenu -->
 
+         
+          
+
+
           </li><!-- End Mega Menu 2 -->
+          <li class="dropdown"><a href="#"><span>Franchise</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="franchise/pharma-franchise.html">Pharma Franchise</a></li>
+              <li><a href="franchise/pharma-exports.html">Pharma Exports</a></li>
+              <li><a href="franchise/marketing-support.html">Marketing Support</a></li>
+            </ul>
+          </li>
           <li><a href="about.html">About</a></li>
           <li><a href="quality.html">Quality</a></li>
           <li><a href="csr.html">CSR</a></li>
@@ -1038,43 +1049,61 @@
   <script src="assets/js/main.js"></script>
 
 
-  <!-- Enquire Modal -->
+  <a href="https://api.whatsapp.com/send?phone=917200483640&text=Hello%20Team%20Zovcur%20Pharma%20Pvt.%20Ltd.,%20I%20was%20going%20through%20your%20Website,%20Please%20connect%20me%20for%20product%20discussion." target="_blank" class="float-btn whatsapp-btn" aria-label="Chat on WhatsApp">
+    <span class="pulse"></span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.637.86 5.13 2.484 7.23L4 29l7.012-2.293A12.96 12.96 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-2.09 0-4.13-.547-5.93-1.582l-.422-.24-4.17 1.363 1.363-4.17-.24-.422C5.547 19.13 5 17.09 5 15c0-6.065 4.935-11 11-11s11 4.935 11 11-4.935 11-11 11zm5.07-6.13c-.277-.138-1.637-.808-1.89-.902-.253-.093-.437-.138-.62.138-.184.277-.713.902-.873 1.087-.161.184-.322.207-.599.069-.277-.138-1.17-.431-2.23-1.373-.824-.735-1.38-1.642-1.542-1.92-.161-.277-.017-.427.122-.565.125-.124.277-.322.415-.483.138-.161.184-.276.276-.46.092-.184.046-.345-.023-.483-.069-.138-.62-1.497-.849-2.05-.224-.54-.453-.466-.62-.475-.161-.007-.345-.009-.53-.009-.184 0-.483.069-.737.345-.253.276-.968.947-.968 2.308 0 1.361.992 2.678 1.13 2.865.138.184 1.953 2.988 4.74 4.068.663.286 1.18.457 1.584.585.665.212 1.27.182 1.75.11.534-.08 1.637-.669 1.87-1.316.23-.646.23-1.2.161-1.316-.069-.115-.253-.184-.53-.322z"/></svg>
+  </a> <!-- Enquire Modal -->
+  
   <div class="modal fade" id="enquireModal" tabindex="-1" aria-labelledby="enquireModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="enquireModalLabel">Enquire Now</h5>
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="max-width:400px;margin:auto;border-radius:1.5em;box-shadow:0 4px 24px rgba(0,0,0,0.10);background:#fff;">
+        <div class="modal-header" style="border-radius:1.5em 1.5em 0 0;background:#fff;border-bottom:2px solid #125774;display:flex;align-items:center;gap:0.7em;">
+          <img src="assets/img/logo/Main-Logo-White.svg" alt="Zovcur Logo" style="height:2.6em;width:auto;display:inline-block;vertical-align:middle;">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <form id="enquireForm" autocomplete="off">
-          <div class="modal-body">
+        <form id="enquireForm" autocomplete="off" style="padding:0 0.5em;">
+          <div class="modal-body" style="background:#fff;border-radius:0 0 1.5em 1.5em;padding:1.2em 1em;">
             <div class="container-fluid">
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label for="enquire-name" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="enquire-name" name="name" required placeholder="Enter your name">
-                </div>
-                <div class="col-md-6">
-                  <label for="enquire-email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="enquire-email" name="email" required placeholder="Enter your email">
-                </div>
-                <div class="col-md-6">
-                  <label for="enquire-phone" class="form-label">Phone</label>
-                  <input type="tel" class="form-control" id="enquire-phone" name="phone" required pattern="[0-9+\-() ]{7,}" placeholder="Enter your phone number">
-                </div>
-                <div class="col-md-6">
-                  <label for="enquire-subject" class="form-label">Subject</label>
-                  <input type="text" class="form-control" id="enquire-subject" name="subject" required placeholder="Subject of your enquiry">
+              <div class="row g-2">
+                <div class="col-12">
+                  <label for="enquire-fullname" class="form-label" style="font-weight:600;color:#125774;font-size:0.98em;">Full Name</label>
+                  <input type="text" class="form-control" id="enquire-fullname" name="fullname" required placeholder="Full Name*" style="height:2.2em;border-radius:1.2em;font-size:0.98em;box-shadow:0 1px 4px rgba(18,87,116,0.08);border:1.5px solid #125774;background:#fafafa;">
                 </div>
                 <div class="col-12">
-                  <label for="enquire-message" class="form-label">Message</label>
-                  <textarea class="form-control" id="enquire-message" name="message" rows="4" required placeholder="Type your message here..."></textarea>
+                  <label for="enquire-contact" class="form-label" style="font-weight:600;color:#125774;font-size:0.98em;">Contact No.</label>
+                  <input type="tel" class="form-control" id="enquire-contact" name="contact" required pattern="[0-9+\-() ]{7,}" placeholder="Contact No.*" style="height:2.2em;border-radius:1.2em;font-size:0.98em;box-shadow:0 1px 4px rgba(18,87,116,0.08);border:1.5px solid #125774;background:#fafafa;">
+                </div>
+                <div class="col-12">
+                  <label for="enquire-location" class="form-label" style="font-weight:600;color:#125774;font-size:0.98em;">Location</label>
+                  <input type="text" class="form-control" id="enquire-location" name="location" required placeholder="Location*" style="height:2.2em;border-radius:1.2em;font-size:0.98em;box-shadow:0 1px 4px rgba(18,87,116,0.08);border:1.5px solid #125774;background:#fafafa;">
+                </div>
+                <div class="col-12">
+                  <label for="enquire-email" class="form-label" style="font-weight:600;color:#125774;font-size:0.98em;">Email</label>
+                  <input type="email" class="form-control" id="enquire-email" name="email" placeholder="Email" style="height:2.2em;border-radius:1.2em;font-size:0.98em;box-shadow:0 1px 4px rgba(18,87,116,0.08);border:1.5px solid #125774;background:#fafafa;">
+                </div>
+                <div class="col-6">
+                  <label for="enquire-gst" class="form-label" style="font-weight:600;color:#125774;font-size:0.98em;">GST No.</label>
+                  <select class="form-select" id="enquire-gst" name="gst" style="height:2.2em;border-radius:1.2em;font-size:0.98em;box-shadow:0 1px 4px rgba(18,87,116,0.08);border:1.5px solid #125774;background:#fafafa;">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+                <div class="col-6">
+                  <label for="enquire-druglicence" class="form-label" style="font-weight:600;color:#125774;font-size:0.98em;">Drug Licence</label>
+                  <select class="form-select" id="enquire-druglicence" name="druglicence" style="height:2.2em;border-radius:1.2em;font-size:0.98em;box-shadow:0 1px 4px rgba(18,87,116,0.08);border:1.5px solid #125774;background:#fafafa;">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="enquire-message" class="form-label" style="font-weight:600;color:#125774;font-size:0.98em;">Message</label>
+                  <textarea class="form-control" id="enquire-message" name="message" rows="3" placeholder="Message" style="min-height:3.2em;border-radius:1.2em;font-size:0.98em;box-shadow:0 1px 4px rgba(18,87,116,0.08);border:1.5px solid #125774;background:#fafafa;"></textarea>
                 </div>
               </div>
             </div>
           </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary w-100" style="border-radius:2em;font-size:1.1em;box-shadow:0 4px 16px rgba(32,208,206,0.15);background:var(--brand-tertiary);border:none;">Submit</button>
+          <div class="modal-footer" style="padding:0.7em 1em;border-radius:0 0 1.5em 1.5em;background:#fff;border-top:2px solid #125774;">
+            <button type="submit" class="btn btn-primary w-100" style="border-radius:1.2em;font-size:1em;box-shadow:0 2px 8px rgba(18,87,116,0.10);background:#125774;color:#fff;border:none;font-weight:600;letter-spacing:0.5px;">Submit</button>
           </div>
         </form>
       </div>

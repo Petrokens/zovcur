@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Quality Assurance | Zovcur Pharma Pvt Ltd</title>
-  <meta name="description" content="Discover Zovcur Pharma's commitment to quality in pharmaceutical manufacturing, from raw material sourcing to final packaging. WHO-GMP, EU-GMP, and ISO certified.">
-  <meta name="keywords" content="pharmaceutical quality, quality assurance, WHO-GMP, EU-GMP, pharmaceutical manufacturing, quality standards, Zovcur Pharma">
+  <title>Zovcur Pharma Pvt Ltd</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/logo/Favicon-Light.svg" rel="icon">
-  <link href="assets/img/logo/Favicon-Light.svg" rel="apple-touch-icon">
+  <link href="/assets/img/logo/Favicon-Light.svg" rel="icon">
+  <link href="/assets/img/logo/Favicon-Light.svg" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -18,29 +18,302 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="/assets/css/main.css" rel="stylesheet">
 
-  <!-- Quality Page Specific CSS -->
-  <link href="assets/css/quality-page.css" rel="stylesheet">
+  <!-- Floating WhatsApp & Call Button Styles with Always-On Animation -->
+  <style>
+    .float-btn {
+      position: fixed;
+      z-index: 9999;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: box-shadow 0.2s;
+      overflow: visible;
+    }
+    .float-btn .pulse {
+      position: absolute;
+      left: 50%;
+      top: 40%;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      opacity: 0.5;
+      animation: pulse-anim 1.2s infinite cubic-bezier(.4,0,.6,1);
+    }
+    @keyframes pulse-anim {
+      0% { opacity: 0.5; transform: translate(-50%, -50%) scale(0.7); }
+      70% { opacity: 0.15; transform: translate(-50%, -50%) scale(1.3); }
+      100% { opacity: 0; transform: translate(-50%, -50%) scale(1.7); }
+    }
+    .whatsapp-btn {
+      left: 1.2em;
+      bottom: 1.2em;
+      background: #25D366;
+    }
+    .call-btn {
+      right: 1.2em;
+      bottom: 500px;
+      background: #00BCD4;
+    }
+    .float-btn svg {
+      width: 36px;
+      height: 36px;
+      color: #fff;
+      z-index: 2;
+    }
+    .whatsapp-btn .pulse {
+      background: rgba(37,211,102,0.25);
+    }
+    .call-btn .pulse {
+      background: rgba(0,188,212,0.25);
+    }
+    @media (max-width: 768px) {
+      .float-btn {
+        width: 70px;
+        height: 70px;
+      }
+      .float-btn svg {
+        width: 36px;
+        height: 36px;
+      }
+    }
+    @media (min-width: 769px) and (max-width: 1200px) {
+      .float-btn {
+        width: 60px;
+        height: 60px;
+      }
+      .float-btn svg {
+        width: 30px;
+        height: 30px;
+      }
+      .whatsapp-btn, .call-btn {
+        bottom: 1.5em;
+      }
+    }
+    @media (min-width: 1201px) {
+      .float-btn {
+        width: 54px;
+        height: 54px;
+      }
+      .float-btn svg {
+        width: 26px;
+        height: 26px;
+      }
+      .whatsapp-btn, .call-btn {
+        bottom: 2em;
+      }
+    }
+  </style>
 
+  <!-- WhatsApp Floating Button Styles -->
+  <style>
+    @media (max-width: 768px) {
+      .whatsapp-float-btn {
+        position: fixed;
+        left: 1.2em;
+        bottom: 1.2em;
+        z-index: 9999;
+        width: 56px;
+        height: 56px;
+        background: #25D366;
+        border-radius: 50%;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: box-shadow 0.2s;
+        overflow: visible;
+      }
+      .whatsapp-float-btn:active .whatsapp-ripple,
+      .whatsapp-float-btn:focus .whatsapp-ripple,
+      .whatsapp-float-btn:hover .whatsapp-ripple {
+        animation: whatsapp-ripple-anim 0.6s linear;
+      }
+      .whatsapp-ripple {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 120px;
+        height: 120px;
+        background: rgba(37,211,102,0.25);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        opacity: 0;
+      }
+      @keyframes whatsapp-ripple-anim {
+        0% { opacity: 0.6; transform: translate(-50%, -50%) scale(0.7); }
+        80% { opacity: 0.2; transform: translate(-50%, -50%) scale(1.2); }
+        100% { opacity: 0; transform: translate(-50%, -50%) scale(1.5); }
+      }
+      .whatsapp-float-btn svg {
+        width: 28px;
+        height: 28px;
+        color: #fff;
+        z-index: 2;
+      }
+    }
+  </style>
 
+  <!-- Super Shining Button Animation Styles -->
+  <style>
+    /* Additional Brand Color Variables for Enhanced Design */
+    :root {
+      --brand-primary: #125774;    /* Dark Blue - Primary brand color */
+      --brand-secondary: #F99928;  /* Yellow/Orange - Secondary accent */
+      --brand-tertiary: #20D0CE;   /* Sky Blue - Tertiary accent */
+      --brand-alert: #FF5A58;      /* Pink/Coral - Alert color */
+      --brand-primary-light: #1a6b8a; /* Lighter shade of primary */
+      --brand-primary-dark: #0e4a61;  /* Darker shade of primary */
+      --brand-secondary-light: #fdb65e; /* Lighter shade of secondary */
+      --brand-tertiary-light: #4dd9d5;  /* Lighter shade of tertiary */
+    }
+
+    .gradient-btn {
+      position: relative;
+      z-index: 1;
+      transition: all 0.1s ease;
+      overflow: hidden;
+    }
+
+    /* Professional shine effect overlay */
+    .gradient-btn::after {
+      content: '';
+      position: absolute;
+      top: -100%;
+      left: -100%;
+      width: 40%;
+      height: 300%;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 10%,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgba(255, 255, 255, 0.1) 90%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: rotate(25deg);
+      z-index: 3;
+      opacity: 0;
+      transition: opacity 0.1s;
+      pointer-events: none;
+      filter: blur(3px);
+    }
+
+    .gradient-btn:hover {
+      transform: translateY(-2px);
+      transition: all 0.1s ease;
+    }
+    
+    .gradient-btn:hover::after {
+      animation: super-shine 2s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+      opacity: 1;
+    }
+
+    /* Primary button hover effect - using Sky Blue */
+    .primary-gradient {
+      background: var(--brand-tertiary);
+    }
+    
+    .primary-gradient:hover {
+      color: white;
+      background: var(--brand-primary);
+      border-color: transparent;
+      box-shadow: 0 8px 25px rgba(32, 208, 206, 0.5);
+    }
+
+    /* Secondary button hover effect - using Yellow/Orange */
+    .secondary-gradient:hover {
+      color: var(--brand-primary);
+      background: var(--brand-secondary-light);
+      border-color: var(--brand-secondary);
+      box-shadow: 0 8px 25px rgba(249, 153, 40, 0.5);
+    }
+
+    /* Super shine sweep animation with professional timing */
+    @keyframes super-shine {
+      0% {
+        left: -100%;
+        opacity: 0;
+      }
+      10% {
+        left: -80%;
+        opacity: 0.7;
+        transform: rotate(25deg);
+      }
+      /* Slow start phase */
+      30% {
+        left: -30%;
+        opacity: 0.8;
+        transform: rotate(25deg);
+      }
+      /* Medium middle phase */
+      60% {
+        left: 60%;
+        opacity: 0.9;
+        transform: rotate(25deg);
+      }
+      /* Fast end phase */
+      85% {
+        left: 150%;
+        opacity: 0.7;
+        transform: rotate(25deg);
+      }
+      100% {
+        left: 180%;
+        opacity: 0;
+        transform: rotate(25deg);
+      }
+    }
+
+    /* Make sure text remains readable during animation */
+    .btn-text {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Feature Icon Hover Effects */
+    .about-feature-card:hover .feature-icon-wrapper {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.15),
+        inset 0 2px 0 rgba(255, 255, 255, 0.9),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    .about-feature-card:hover .feature-icon-wrapper i {
+      font-size: 2rem;
+      text-shadow: 
+        0 3px 6px rgba(0, 0, 0, 0.3),
+        0 1px 0 rgba(255, 255, 255, 0.9);
+    }
+  </style>
 </head>
 
 <body class="index-page">
 
- <header id="header" class="header d-flex align-items-center fixed-top">
+  <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
-  <img src="assets/img/logo/Main-Logo-White.svg" alt="Zovcur Pharma Logo" class="zovcur-logo-responsive">
+      <a href="#" class="logo d-flex align-items-center me-auto me-xl-0">
+  <img src="/assets/img/logo/Main-Logo-White.svg" alt="Zovcur Pharma Logo" class="zovcur-logo-responsive">
   <style>
     /* Responsive logo for all Bootstrap breakpoints */
     .zovcur-logo-responsive {
@@ -101,7 +374,7 @@
         <ul>
           <li><a href="/" class="active">Home</a></li>
           <!-- Megamenu 2 -->
-          <li class="megamenu-2"><a href="products.html"><span>Products</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="megamenu-2"><a href="/products.html"><span>Products</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
 
             <!-- Mobile Megamenu -->
             <ul class="mobile-megamenu">
@@ -588,16 +861,16 @@
           </li><!-- End Mega Menu 2 -->
           <li class="dropdown"><a href="#"><span>Franchise</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="franchise/pharma-franchise.html">Pharma Franchise</a></li>
-              <li><a href="franchise/pharma-exports.html">Pharma Exports</a></li>
-              <li><a href="franchise/marketing-support.html">Marketing Support</a></li>
+              <li><a href="/franchise/pharma-franchise.html">Pharma Franchise</a></li>
+              <li><a href="/franchise/pharma-exports.html">Pharma Exports</a></li>
+              <li><a href="/franchise/marketing-support.html">Marketing Support</a></li>
             </ul>
           </li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="quality.html">Quality</a></li>
-          <li><a href="csr.html">CSR</a></li>
-          <li><a href="careers.html">Careers</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/quality.html">Quality</a></li>
+          <li><a href="/csr.html">CSR</a></li>
+          <li><a href="/careers.html">Careers</a></li>
+          <li><a href="/contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -608,255 +881,244 @@
   </header>
 
   <main class="main">
-    
+
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background position-relative" style="overflow:hidden;">
       <div class="container-fluid p-0">
-        <div class="hero-wrapper d-flex align-items-center position-relative" style="min-height: 60vh; background: url('assets/img/hero-bg.png') center center/cover no-repeat;">
+        <div class="hero-wrapper d-flex align-items-center position-relative" style="min-height: 60vh; background: url('/assets/img/hero-bg.png') center center/cover no-repeat;">
           <!-- Overlay for better text contrast -->
           <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100" style="background:rgba(26,53,91,0.65);z-index:1;"></div>
           <div class="hero-content position-relative w-100" style="flex:2;display:flex;align-items:center;z-index:2;">
             <div class="container">
               <div class="row">
                 <div class="col-lg-8 mx-auto text-center py-5">
-                  <h1 class="display-4 text-white fw-bold mb-4" data-aos="fade-up">Quality Assurance</h1>
-                  <p class="lead text-white mb-5" data-aos="fade-up" data-aos-delay="100">The foundation of trust that drives everything we do</p>
+                  <h1 class="display-4 text-white fw-bold mb-4" data-aos="fade-up">Marketing Support & Promotional Materials</h1>
+                  <p class="lead text-white mb-5" data-aos="fade-up" data-aos-delay="100">Complete marketing support for Pharma PCD Party, Franchise, Marketing Team and Distributors with professional promotional materials</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section><!-- /Hero Section -->
-    
-    <!-- Introduction Section -->
-    <section id="quality-intro" class="section light-background">
-      <div class="container" data-aos="fade-up">
-        <div class="row justify-content-center">
-          <div class="col-lg-10 text-center">
-            <div class="section-title">
-              <h2>Cure with Commitment</h2>
-              <p>Our quality commitment shapes the future of healthcare</p>
-            </div>
-            <div class="lead-text mb-5" data-aos="fade-up" data-aos-delay="100">
-              <p class="lead">At Zovcur Pharma, we believe that every breakthrough begins with a single promise: to bring science closer to life. With innovation at our core and integrity in every step, we are committed to delivering trusted medicines, wellness solutions, and healthcare services that touch lives across the globe.</p>
-              <p>For over decades, the spirit of "Zov – Cure" has guided our purpose: to heal, to improve, and to sustain a healthier tomorrow.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- /Introduction Section -->
-    
-    <!-- Quality Standards Section -->
-    <section id="quality-standards" class="section">
-      <div class="container" data-aos="fade-up">
-        <div class="row align-items-center">
-          <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay="100">
-            <div class="card shadow border-0 h-100 p-0 bg-white rounded-4 position-relative overflow-hidden">
-              <img src="assets/img/divisions/Quality Assurance.png" alt="Zovcur Quality Assurance" class="img-fluid rounded-4 w-100" style="object-fit:cover;min-height:320px;">
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-            <div class="content-wrapper">
-              <h2 class="fw-bold mb-4" style="color:#1a355b;">Quality Commitment</h2>
-              <p class="mb-4">Quality is the backbone of Zovcur Pharma. Every stage of our operations — from raw material sourcing to final packaging — undergoes the strictest checks to ensure compliance with global regulatory standards such as WHO-GMP, USFDA, and EU guidelines.</p>
-              <p class="mb-4">Our state-of-the-art quality assurance systems guarantee:</p>
-              <div class="quality-features">
-                <div class="row">
-                  <div class="col-md-6 mb-3">
-                    <div class="feature-item d-flex align-items-start">
-                      <i class="fas fa-check-circle me-2 mt-1" style="color:#1a355b;"></i>
-                      <p class="mb-0"><strong>Zero Defect Manufacturing</strong></p>
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-3">
-                    <div class="feature-item d-flex align-items-start">
-                      <i class="fas fa-check-circle me-2 mt-1" style="color:#1a355b;"></i>
-                      <p class="mb-0"><strong>Sustainable & Safe Practices</strong></p>
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-3">
-                    <div class="feature-item d-flex align-items-start">
-                      <i class="fas fa-check-circle me-2 mt-1" style="color:#1a355b;"></i>
-                      <p class="mb-0"><strong>Global Standard Compliance</strong></p>
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-3">
-                    <div class="feature-item d-flex align-items-start">
-                      <i class="fas fa-check-circle me-2 mt-1" style="color:#1a355b;"></i>
-                      <p class="mb-0"><strong>Patient-Centric Product Design</strong></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p class="mt-3"><em>Because at Zovcur, quality is not tested at the end — it is built into every step.</em></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- /Quality Standards Section -->
-    
-    <!-- Quality Process Section -->
-    <section id="quality-process" class="section light-background">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Our Quality Process</h2>
-          <p>Excellence at every stage of pharmaceutical development</p>
-        </div>
-        
-        <div class="row gy-4 mt-4">
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="process-card h-100">
-              <div class="process-icon mb-4">
-                <i class="fas fa-flask fa-2x" style="color:#1a355b;"></i>
-              </div>
-              <h3 class="mb-3">Raw Material Sourcing</h3>
-              <p>We partner with trusted, audited suppliers who meet our stringent quality requirements. All incoming materials undergo comprehensive testing before entering our production facility.</p>
-            </div>
-          </div>
-          
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="process-card h-100">
-              <div class="process-icon mb-4">
-                <i class="fas fa-cogs fa-2x" style="color:#1a355b;"></i>
-              </div>
-              <h3 class="mb-3">Manufacturing Excellence</h3>
-              <p>Our production follows strict SOPs with in-process quality checks at every critical stage. We implement continuous monitoring systems and electronic batch records for complete traceability.</p>
-            </div>
-          </div>
-          
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="process-card h-100">
-              <div class="process-icon mb-4">
-                <i class="fas fa-microscope fa-2x" style="color:#1a355b;"></i>
-              </div>
-              <h3 class="mb-3">Analytical Testing</h3>
-              <p>State-of-the-art laboratories equipped with advanced analytical instruments ensure every batch meets specifications through rigorous testing protocols.</p>
-            </div>
-          </div>
-          
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="process-card h-100">
-              <div class="process-icon mb-4">
-                <i class="fas fa-clipboard-check fa-2x" style="color:#1a355b;"></i>
-              </div>
-              <h3 class="mb-3">Documentation</h3>
-              <p>Comprehensive documentation system capturing every aspect of production, testing, and distribution ensures complete compliance with regulatory requirements.</p>
-            </div>
-          </div>
-          
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="process-card h-100">
-              <div class="process-icon mb-4">
-                <i class="fas fa-truck fa-2x" style="color:#1a355b;"></i>
-              </div>
-              <h3 class="mb-3">Supply Chain Integrity</h3>
-              <p>Temperature-controlled transportation, secure packaging, and end-to-end tracking systems maintain product quality from our facility to the end user.</p>
-            </div>
-          </div>
-          
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="process-card h-100">
-              <div class="process-icon mb-4">
-                <i class="fas fa-sync-alt fa-2x" style="color:#1a355b;"></i>
-              </div>
-              <h3 class="mb-3">Continuous Improvement</h3>
-              <p>Regular audits, data analysis, and feedback implementation drive our quality management system towards higher standards and operational excellence.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- /Quality Process Section -->
-    
-    <!-- Certifications Section -->
-    <!-- <section id="certifications" class="section">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Our Certifications</h2>
-          <p>Recognition of our commitment to excellence</p>
-        </div>
-        
-        <div class="row justify-content-center align-items-center mt-4">
-          <div class="col-lg-8">
-            <div class="certifications d-flex justify-content-center flex-wrap gap-4 py-4">
-              <div class="certification-item p-3 bg-white rounded-3 shadow-sm d-flex align-items-center" data-aos="zoom-in" data-aos-delay="100">
-                <img src="assets/img/clients/clients-1.webp" alt="WHO-GMP Certification" style="max-height:60px;">
-              </div>
-              <div class="certification-item p-3 bg-white rounded-3 shadow-sm d-flex align-items-center" data-aos="zoom-in" data-aos-delay="200">
-                <img src="assets/img/clients/clients-2.webp" alt="EU-GMP Certification" style="max-height:60px;">
-              </div>
-              <div class="certification-item p-3 bg-white rounded-3 shadow-sm d-flex align-items-center" data-aos="zoom-in" data-aos-delay="300">
-                <img src="assets/img/clients/clients-3.webp" alt="ISO 9001:2015" style="max-height:60px;">
-              </div>
-              <div class="certification-item p-3 bg-white rounded-3 shadow-sm d-flex align-items-center" data-aos="zoom-in" data-aos-delay="400">
-                <img src="assets/img/clients/clients-4.webp" alt="ISO 14001:2015" style="max-height:60px;">
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4" data-aos="fade-left" data-aos-delay="200">
-            <div class="certification-content p-4">
-              <h3 class="mb-3">Globally Recognized Standards</h3>
-              <p>Our facilities and processes are certified by leading regulatory authorities worldwide, affirming our commitment to the highest quality standards in pharmaceutical manufacturing.</p>
-              <p>These certifications demonstrate our consistent ability to produce medications that meet rigorous international requirements for safety, efficacy, and quality.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    
-    <!-- Quality Team Section -->
-    <section id="quality-team" class="section light-background">
-      <div class="container" data-aos="fade-up">
-        <div class="row align-items-center">
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-            <div class="content-wrapper pe-lg-4">
-              <h2 class="fw-bold mb-4" style="color:#1a355b;">The Quality Team</h2>
-              <p class="mb-4">Behind our quality management system is a dedicated team of professionals with extensive experience in pharmaceutical quality assurance, regulatory affairs, and compliance management.</p>
-              <p class="mb-4">Our team comprises:</p>
-              <ul class="list-unstyled mb-4">
-                <li class="mb-3"><i class="fas fa-user-shield me-2" style="color:#1a355b;"></i> Quality Assurance Specialists</li>
-                <li class="mb-3"><i class="fas fa-flask me-2" style="color:#1a355b;"></i> Analytical Scientists</li>
-                <li class="mb-3"><i class="fas fa-clipboard-list me-2" style="color:#1a355b;"></i> Regulatory Affairs Experts</li>
-                <li class="mb-3"><i class="fas fa-search me-2" style="color:#1a355b;"></i> Quality Control Technicians</li>
-                <li class="mb-3"><i class="fas fa-chart-line me-2" style="color:#1a355b;"></i> Process Improvement Engineers</li>
-              </ul>
-              <p>Together, they ensure that every Zovcur product consistently meets our exacting standards and regulatory requirements.</p>
-            </div>
-          </div>
-          <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-left" data-aos-delay="200">
-            <div class="card shadow border-0 h-100 p-0 bg-white rounded-4 position-relative overflow-hidden">
-              <img src="assets/img/about/img-10.png" alt="Zovcur Quality Team" class="img-fluid rounded-4 w-100" style="object-fit:cover;min-height:320px;">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- /Quality Team Section -->
-    
-    <!-- Call To Action Section -->
-    <section id="call-to-action" class="call-to-action section">
+    </section><!-- /Hero Section -->  
+
+    <!-- Franchise Information Section -->
+    <section id="franchise-info" class="franchise-info section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center">
-          <div class="col-lg-10 text-center">
-            <h2 data-aos="fade-up" data-aos-delay="200">Partner with Zovcur Pharma</h2>
-            <p data-aos="fade-up" data-aos-delay="250">Experience pharmaceutical excellence backed by rigorous quality standards. Connect with us to learn more about our quality processes and how they benefit your business and patients.</p>
-            <div class="cta-buttons" data-aos="fade-up" data-aos-delay="300">
-              <a href="contact.html" class="btn-primary">Contact Our Team</a>
-              <a href="#" class="btn-secondary">Request Quality Documentation</a>
+          <div class="col-lg-10">
+            
+            <!-- Main Content Card -->
+            <div class="card shadow border-0 mb-5" style="border-radius:1rem;overflow:hidden;">
+              <div class="card-body p-5">
+                <div class="row align-items-center mb-4">
+                  <div class="col-lg-8">
+                    <h2 class="fw-bold mb-3" style="color:var(--brand-primary);font-size:2.2rem;">Facilities to Pharma PCD Party, Franchise, Marketing Team and Distributors</h2>
+                    <p class="lead mb-0" style="color:var(--brand-secondary);font-weight:600;font-size:1.2rem;">Promotional Material Provide by Zovcur Pharma Pvt. Ltd.</p>
+                  </div>
+                  <div class="col-lg-4 text-end">
+                    <div class="feature-badge" style="background:linear-gradient(135deg, var(--brand-tertiary), var(--brand-tertiary-light));color:#fff;padding:1rem 1.5rem;border-radius:1rem;display:inline-block;">
+                      <i class="bi bi-megaphone" style="font-size:1.5rem;"></i>
+                      <div style="font-size:0.9rem;font-weight:600;margin-top:0.3rem;">Marketing Support</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="content-section mb-4">
+                  <p style="font-size:1.1rem;line-height:1.7;margin-bottom:1.5rem;">We Shall Provide <strong style="color:var(--brand-secondary);">Free Visual Ads And M.R. Bag Available With Logo Free Of Cost</strong> Along With Your First Order and At Joining Time of Job.</p>
+                  
+                  <p style="font-size:1.1rem;line-height:1.7;margin-bottom:1.5rem;">We shall provide you the below mention <strong>promotional materials</strong> to support your business growth and market penetration effectively.</p>
+                  
+                  <p style="font-size:1.1rem;line-height:1.7;margin-bottom:1.5rem;">Our comprehensive marketing support ensures that you have all the necessary tools and materials to <strong>establish and grow your pharmaceutical business</strong> successfully in your territory.</p>
+                </div>
+
+                <div class="highlight-box" style="background:linear-gradient(135deg, #f8f9fa, #e9ecef);border-left:4px solid var(--brand-primary);padding:1.5rem;border-radius:0.5rem;margin:2rem 0;">
+                  <h4 style="color:var(--brand-primary);margin-bottom:1rem;"><i class="bi bi-megaphone me-2"></i>Complete Marketing Support Package</h4>
+                  <p style="margin-bottom:0;font-size:1.05rem;line-height:1.6;">Get access to comprehensive promotional materials, digital marketing support, and ongoing business development assistance to maximize your market potential and sales growth.</p>
+                </div>
+              </div>
             </div>
+
+            <!-- Promotional Materials Section -->
+            <div class="row g-4 mb-5">
+              <div class="col-lg-6">
+                <div class="service-card h-100" style="background:#fff;border-radius:1rem;padding:2rem;box-shadow:0 4px 20px rgba(0,0,0,0.08);border:1px solid #e9ecef;">
+                  <div class="service-icon mb-3" style="background:linear-gradient(135deg, var(--brand-primary), var(--brand-primary-light));color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+                    <i class="bi bi-file-earmark-medical" style="font-size:1.5rem;"></i>
+                  </div>
+                  <h4 style="color:var(--brand-primary);margin-bottom:1rem;">Print Marketing Materials</h4>
+                  <ul class="list-unstyled" style="font-size:0.95rem;">
+                    <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                      <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                      Pharma Products Visual-Aid With Detail
+                    </li>
+                    <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                      <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                      Pharma Products Promotional Literatures
+                    </li>
+                    <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                      <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                      Chemist Order Book
+                    </li>
+                    <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                      <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                      Visual Profile For Company
+                    </li>
+                    <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                      <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                      Company Visiting Cards
+                    </li>
+                    <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                      <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                      Pharma Products Reminder Cards
+                    </li>
+                    <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                      <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                      Company Product List
+                    </li>
+                    <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                      <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                      Postal Envelope
+                    </li>
+                    <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                      <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                      Company Letterhead
+                    </li>
+                    <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                      <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                      Prescription Pad For Doctors And Chemists
+                    </li>
+                    <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                      <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                      Pharma Products Quality Paper On Demand Basis
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="col-lg-6">
+                <div class="service-card h-100" style="background:#fff;border-radius:1rem;padding:2rem;box-shadow:0 4px 20px rgba(0,0,0,0.08);border:1px solid #e9ecef;">
+                  <div class="service-icon mb-3" style="background:linear-gradient(135deg, var(--brand-secondary), var(--brand-secondary-light));color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+                    <i class="bi bi-bag-check" style="font-size:1.5rem;"></i>
+                  </div>
+                  <h4 style="color:var(--brand-primary);margin-bottom:1rem;">Business Support Materials</h4>
+                  <ul class="list-unstyled" style="font-size:0.95rem;">
+                    <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                      <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                      Pharma Products Marketing Bag
+                    </li>
+                    <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                      <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                      Small Gifts Calendars & Diaries
+                    </li>
+                    <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                      <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                      Sample Cover For Products For Doctor
+                    </li>
+                    <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                      <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                      Final Sample With Products
+                    </li>
+                    <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                      <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                      Free Sample Kit For Our Choice Able Prod
+                    </li>
+                    <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                      <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                      Pens
+                    </li>
+                    <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                      <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                      Gifts On Business Basis
+                    </li>
+                    <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                      <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                      Pharma Products Knowledge With Full Detail
+                    </li>
+                    <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                      <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                      Visiting Card & Company Logo (For Car & Bike)
+                    </li>
+                    <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                      <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                      Thanking Letter For Doctors And Chemist
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Digital Marketing Support Section -->
+            <div class="row g-4 mb-5">
+              <div class="col-lg-12">
+                <div class="service-card" style="background:#fff;border-radius:1rem;padding:2rem;box-shadow:0 4px 20px rgba(0,0,0,0.08);border:1px solid #e9ecef;">
+                  <div class="row align-items-center">
+                    <div class="col-md-2 text-center">
+                      <div class="service-icon mb-3" style="background:linear-gradient(135deg, var(--brand-tertiary), var(--brand-tertiary-light));color:#fff;width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto;">
+                        <i class="bi bi-globe" style="font-size:2rem;"></i>
+                      </div>
+                    </div>
+                    <div class="col-md-10">
+                      <h4 style="color:var(--brand-primary);margin-bottom:1rem;">Digital Marketing & Online Support</h4>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <ul class="list-unstyled" style="font-size:0.95rem;">
+                            <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                              <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                              Web Site Support For Products Introduction In Market
+                            </li>
+                            <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                              <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                              New Products Introduction By SMS, Face Book, And Other Social Media
+                            </li>
+                            <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                              <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                              Advertising On Different Type Of Print Media Time By Time
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-md-6">
+                          <ul class="list-unstyled" style="font-size:0.95rem;">
+                            <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                              <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                              New Product Suggestion Accepted And Work On It
+                            </li>
+                            <li class="mb-1" style="padding-left:1.2rem;position:relative;">
+                              <i class="bi bi-check-circle-fill" style="color:var(--brand-tertiary);position:absolute;left:0;top:0.1rem;font-size:0.8rem;"></i>
+                              On Quality Concern We Get Suggestion From Market And Improve Products When It Require
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="cta-section text-center" style="background:linear-gradient(135deg, var(--brand-primary), var(--brand-primary-light));color:#fff;padding:3rem 2rem;border-radius:1rem;">
+              <h3 class="mb-3" style="font-weight:700; color: #fff;">Ready to Get Complete Marketing Support?</h3>
+              <p class="mb-4" style="font-size:1.1rem;opacity:0.9;">Join Zovcur Pharma Pvt. Ltd. and get access to comprehensive promotional materials and marketing support for your pharmaceutical business success.</p>
+              <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a href="#" class="btn btn-light px-4 py-2 fw-bold" style="border-radius:2rem;color:var(--brand-primary);" data-bs-toggle="modal" data-bs-target="#enquireModal">Get Marketing Support</a>
+                <a href="#" class="btn btn-outline-light px-4 py-2 fw-bold" style="border-radius:2rem;">View Materials Catalog</a>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
-    </section><!-- /Call To Action Section -->
-
+    </section><!-- /Franchise Information Section -->
   </main>
 
- <footer id="footer" class="footer position-relative light-background">
+  <footer id="footer" class="footer position-relative light-background">
 
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="/" class="logo d-flex align-items-center">
-            <img src="assets/img/logo/Main-Logo-White.svg" alt="Zovcur Pharma Logo" style="height:32px;width:auto;">
+            <img src="/assets/img/logo/Main-Logo-White.svg" alt="Zovcur Pharma Logo" style="height:32px;width:auto;">
             <!-- <span class="sitename ms-2" style="font-weight:bold;color:#1a355b;">Zovcur Pharma</span> -->
           </a>
           <div class="footer-contact pt-3">
@@ -879,11 +1141,11 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="quality.html">Quality</a></li>
-            <li><a href="csr.html">CSR</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/products.html">Products</a></li>
+            <li><a href="/quality.html">Quality</a></li>
+            <li><a href="/csr.html">CSR</a></li>
+            <li><a href="/contact.html">Contact</a></li>
           </ul>
         </div>
 
@@ -902,7 +1164,7 @@
           <h4>Resources</h4>
           <ul>
             <li><a href="#">Certifications</a></li>
-            <li><a href="careers.html">Careers</a></li>
+            <li><a href="/careers.html">Careers</a></li>
             <li><a href="#">Media</a></li>
             <li><a href="#">Sustainability</a></li>
             <li><a href="#">Privacy Policy</a></li>
@@ -933,7 +1195,7 @@
 
   <!-- Preloader will be injected dynamically -->
   <script>
-    fetch('assets/partials/preloader.html')
+    fetch('/assets/partials/preloader.html')
       .then(res => res.text())
       .then(html => {
         document.body.insertAdjacentHTML('afterbegin', html);
@@ -941,31 +1203,27 @@
   </script>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/aos/aos.js"></script>
+  <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
 
 
 
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="/assets/js/main.js"></script>
 
 
-  <a href="https://api.whatsapp.com/send?phone=917200483640&text=Hello%20Team%20Zovcur%20Pharma%20Pvt.%20Ltd.,%20I%20was%20going%20through%20your%20Website,%20Please%20connect%20me%20for%20product%20discussion." target="_blank" class="float-btn whatsapp-btn" aria-label="Chat on WhatsApp">
-    <span class="pulse"></span>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.637.86 5.13 2.484 7.23L4 29l7.012-2.293A12.96 12.96 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-2.09 0-4.13-.547-5.93-1.582l-.422-.24-4.17 1.363 1.363-4.17-.24-.422C5.547 19.13 5 17.09 5 15c0-6.065 4.935-11 11-11s11 4.935 11 11-4.935 11-11 11zm5.07-6.13c-.277-.138-1.637-.808-1.89-.902-.253-.093-.437-.138-.62.138-.184.277-.713.902-.873 1.087-.161.184-.322.207-.599.069-.277-.138-1.17-.431-2.23-1.373-.824-.735-1.38-1.642-1.542-1.92-.161-.277-.017-.427.122-.565.125-.124.277-.322.415-.483.138-.161.184-.276.276-.46.092-.184.046-.345-.023-.483-.069-.138-.62-1.497-.849-2.05-.224-.54-.453-.466-.62-.475-.161-.007-.345-.009-.53-.009-.184 0-.483.069-.737.345-.253.276-.968.947-.968 2.308 0 1.361.992 2.678 1.13 2.865.138.184 1.953 2.988 4.74 4.068.663.286 1.18.457 1.584.585.665.212 1.27.182 1.75.11.534-.08 1.637-.669 1.87-1.316.23-.646.23-1.2.161-1.316-.069-.115-.253-.184-.53-.322z"/></svg>
-  </a> <!-- Enquire Modal -->
-  
+  <!-- Enquire Modal -->
   <div class="modal fade" id="enquireModal" tabindex="-1" aria-labelledby="enquireModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content" style="max-width:400px;margin:auto;border-radius:1.5em;box-shadow:0 4px 24px rgba(0,0,0,0.10);background:#fff;">
         <div class="modal-header" style="border-radius:1.5em 1.5em 0 0;background:#fff;border-bottom:2px solid #125774;display:flex;align-items:center;gap:0.7em;">
-          <img src="assets/img/logo/Main-Logo-White.svg" alt="Zovcur Logo" style="height:2.6em;width:auto;display:inline-block;vertical-align:middle;">
+          <img src="/assets/img/logo/Main-Logo-White.svg" alt="Zovcur Logo" style="height:2.6em;width:auto;display:inline-block;vertical-align:middle;">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <form id="enquireForm" autocomplete="off" style="padding:0 0.5em;">
@@ -1018,6 +1276,18 @@
   </div>
 
 </body>
+
+  <!-- WhatsApp & Call Floating Buttons (Mobile Only) -->
+  <!-- WhatsApp & Call Floating Buttons with Always-On Animation -->
+  <a href="https://api.whatsapp.com/send?phone=917200483640&text=Hello%20Team%20Zovcur%20Pharma%20Pvt.%20Ltd.,%20I%20was%20going%20through%20your%20Website,%20Please%20connect%20me%20for%20product%20discussion." target="_blank" class="float-btn whatsapp-btn" aria-label="Chat on WhatsApp">
+    <span class="pulse"></span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.637.86 5.13 2.484 7.23L4 29l7.012-2.293A12.96 12.96 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-2.09 0-4.13-.547-5.93-1.582l-.422-.24-4.17 1.363 1.363-4.17-.24-.422C5.547 19.13 5 17.09 5 15c0-6.065 4.935-11 11-11s11 4.935 11 11-4.935 11-11 11zm5.07-6.13c-.277-.138-1.637-.808-1.89-.902-.253-.093-.437-.138-.62.138-.184.277-.713.902-.873 1.087-.161.184-.322.207-.599.069-.277-.138-1.17-.431-2.23-1.373-.824-.735-1.38-1.642-1.542-1.92-.161-.277-.017-.427.122-.565.125-.124.277-.322.415-.483.138-.161.184-.276.276-.46.092-.184.046-.345-.023-.483-.069-.138-.62-1.497-.849-2.05-.224-.54-.453-.466-.62-.475-.161-.007-.345-.009-.53-.009-.184 0-.483.069-.737.345-.253.276-.968.947-.968 2.308 0 1.361.992 2.678 1.13 2.865.138.184 1.953 2.988 4.74 4.068.663.286 1.18.457 1.584.585.665.212 1.27.182 1.75.11.534-.08 1.637-.669 1.87-1.316.23-.646.23-1.2.161-1.316-.069-.115-.253-.184-.53-.322z"/></svg>
+  </a>
+  </a>
+  <!-- <a href="tel:+917200483640" class="float-btn call-btn" aria-label="Call">
+    <span class="pulse"></span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1.003 1.003 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C10.07 27 5 21.93 5 15.5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.13.36.04.77-.24 1.01l-2.2 2.2z"/></svg>
+  </a> -->
 
 </html>
 
